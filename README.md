@@ -229,7 +229,7 @@ Your system will use this key for LLM-powered agents.
 - Breaks added after each task
   - < 60 min → 5 min break
   - 60–120 min → 15 min break
-  -  > 120 min → 20 min break
+  - > 120 min → 20 min break
     >
 
 This ensures a realistic plan with proper work‑break cycles.
@@ -241,3 +241,9 @@ This ensures a realistic plan with proper work‑break cycles.
 - Timezone handling uses `tzlocal` to avoid UTC shift issues.
 - Category importance mapping is customizable in `priority_agent.py`.
 - UI supports both JSON and plain-English input formats.
+
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
