@@ -8,7 +8,8 @@ This project implements a multi‑agent productivity system designed to collect 
 # 1. Architecture Overview
 
 Below is the complete architecture and workflow layout of the system.
-![Personal Productivity Agent Architecture](G:\My_Courses\GoogleAgenticAI\personal-productivity-agent\docs\diagrams)
+![Personal Productivity Agent Architecture]
+<img width="1801" height="1618" alt="AgentFlow" src="https://github.com/user-attachments/assets/202265a8-16ef-42c8-960d-1c9eb5b46e96" />
 
 ```
                          ┌─────────────────────────────────────────┐
