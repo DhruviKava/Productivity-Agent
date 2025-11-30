@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "name": "Morning standup meeting",
+      "category": "meeting",
+      "priority": "high",
+      "estimated_duration": 30,
+      "deadline": "2025-11-18T10:00:00"
+    },
+    {
+      "name": "Review pull requests",
+      "category": "review",
+      "priority": "medium",
+      "estimated_duration": 45,
+      "deadline": "2025-11-18T14:00:00"
+    },
+    {
+      "name": "Reply to client emails",
+      "category": "email",
+      "priority": "medium",
+      "estimated_duration": 20,
+      "deadline": "2025-11-18T16:00:00"
+    },
+    {
+      "name": "Build dashboard UI",
+      "category": "coding",
+      "priority": "high",
+      "estimated_duration": 120,
+      "deadline": "2025-11-19T15:00:00"
+    },
+    {
+      "name": "Study ADK course",
+      "category": "learning",
+      "priority": "low",
+      "estimated_duration": 60,
+      "deadline": "2025-11-20T18:00:00"
+    },
+    {
+      "name": "Plan weekly roadmap",
+      "category": "planning",
+      "priority": "medium",
+      "estimated_duration": 40,
+      "deadline": "2025-11-19T12:00:00"
+    }
+  ]
+}

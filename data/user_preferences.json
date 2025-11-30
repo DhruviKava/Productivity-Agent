@@ -1,0 +1,7 @@
+{
+  "work_start_hour": 9,
+  "work_end_hour": 17,
+  "preferred_session_length_hours": 2,
+  "short_task_threshold": 1,
+  "theme": "dark"
+}

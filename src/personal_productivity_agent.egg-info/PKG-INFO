@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: personal_productivity_agent
+Version: 0.1
+Summary: A personal productivity agent
+Author-email: Your Name <your.email@example.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: gradio
+Dynamic: license-file
+
+# 🤖 Personal Productivity Agent System
+
+An intelligent multi-agent system built with Google's Agent Development Kit (ADK) and Gemini that automates task management, scheduling, and productivity optimization.
+
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+
+## 📋 Overview
+
+This project is a complete AI agent system that takes your tasks and automatically:
+- ✅ Collects and normalizes tasks from various formats
+- 🎯 Prioritizes based on urgency, importance, and deadlines
+- 📅 Creates optimized daily schedules
+- ⏰ Generates smart reminders
+- 🔄 Learns from your habits and continuously improves
+
+**Built for the 5-Day AI Agents Intensive Course - Capstone Project**
+
+## 🏗️ Architecture
+```
+┌─────────────────────────────────────────┐
+│     Main Orchestrator (A2A Hub)         │
+│   (Coordinates via A2A Protocol)        │
+└──────────────┬──────────────────────────┘
+               │
+      ┌────────┴────────┐
+      │                 │
+┌─────▼──────┐    ┌────▼─────────┐
+│ Collector  │───▶│  Priority    │
+│   Agent    │    │   Agent      │
+└────────────┘    └──────┬───────┘
+                         │
+                  ┌──────▼───────┐
+                  │   Planner    │
+                  │    Agent     │
+                  └──────┬───────┘
+                         │
+        ┌────────────────┴────────────┐
+        │                             │
+  ┌─────▼──────┐              ┌──────▼────────┐
+  │  Reminder  │              │  Reflection   │
+  │   Agent    │              │     Agent     │
+  └────────────┘              └───────────────┘
+```
+
+## ✨ Features Implemented
+
+This project demonstrates **ALL 8 required concepts** from the course:
+
+### 1. ✅ Multi-agent System
+- 5 specialized LLM-powered agents
+- Sequential agent pipeline
+- Loop agents for continuous improvement
+
+### 2. ✅ Tools
+- **MCP Tools**: File read/write operations
+- **Custom Tools**: Habit analyzer, time estimator, quality scorer
+- **Built-in Tools**: Google Search for task research
+
+### 3. ✅ Sessions & Memory
+- **Sessions**: InMemorySessionService for state management
+- **Memory Bank**: Long-term storage of preferences and patterns
+
+### 4. ✅ Context Engineering
+- Smart context compaction for large task lists
+- Automatic summarization of older tasks
+
+### 5. ✅ Observability
+- **Logging**: Structured logging with all agent actions
+- **Tracing**: Distributed tracing across agent workflows
+- **Metrics**: Performance metrics and analytics
+
+### 6. ✅ Agent Evaluation
+- LLM-as-judge quality scoring
+- Multi-criteria evaluation (time efficiency, feasibility, etc.)
+
+### 7. ✅ A2A Protocol
+- Agent-to-agent communication
+- Message queue and routing
+- Complete communication audit trail
+
+### 8. ✅ Agent Deployment
+- Docker configuration
+- Cloud deployment instructions
+- Production-ready setup
+
+### Bonus Features
+- ⚡ **Gemini-Powered**: All agents use Gemini 2.0 Flash
+- 📊 **Real-time Analytics**: Track agent performance
+- 🎓 **Learning System**: Improves over time
+
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
+- Python 3.11 or higher
+- Google API Key (get from ai.google.dev)
+```
+
+### Installation
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd personal-productivity-agent
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Set up environment
+cp .env.example .env
+# Edit .env and add your GOOGLE_API_KEY
+
+# 4. Run the system
+python src/main.py
+```
+
+## 📖 Usage Examples
+
+### Example 1: Process Daily Tasks
+```bash
+python examples/example_1_daily_tasks.py
+```
+
+###
+
+ Example 2: Project Planning
+```bash
+python examples/example_2_project_planning.py
+```
+
+### Example 3: Memory & Learning
+```bash
+python examples/example_3_habit_tracking.py
+```
+
+## 📁 Project Structure
+```
+personal-productivity-agent/
+├── src/
+│   ├── agents/           # All 5 agent implementations
+│   ├── tools/            # MCP, custom, and built-in tools
+│   ├── memory/           # Session and memory management
+│   ├── observability/    # Logging, tracing, metrics
+│   ├── evaluation/       # Agent evaluation system
+│   └── utils/            # Helper functions
+├── data/                 # Sample data and outputs
+├── examples/             # Usage examples
+├── deployment/           # Docker and deployment configs
+└── tests/                # Test suite
+```
+
+## 🎯 How It Works
+
+1. **Input**: Provide tasks in JSON, text, or any format
+2. **Collect**: Collector Agent normalizes and enriches tasks
+3. **Prioritize**: Priority Agent ranks by importance using smart scoring
+4. **Plan**: Planner Agent creates optimized schedule with breaks
+5. **Remind**: Reminder Agent generates notifications and saves files
+6. **Reflect**: Reflection Agent learns patterns and suggests improvements
+7. **Loop**: System decides if re-planning needed based on performance
+
+## 📊 Evaluation Results
+
+Sample plan evaluation:

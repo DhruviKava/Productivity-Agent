@@ -1,0 +1,96 @@
+import gradio as gr
+
+from src.agents.collector_agent import Collector, normalize_tasks
+from src.orchestrator import Orchestrator
+
+def load_agents():
+    agents = []
+    try:
+        from src.agents.priority_agent import PriorityAgent
+        from src.agents.planner_agent import PlannerAgent
+        from src.agents.reminder_agent import ReminderAgent
+        from src.agents.reflection_agent import ReflectionAgent
+
+        agents.extend([
+            PriorityAgent(),
+            PlannerAgent(),
+            ReminderAgent(),
+            ReflectionAgent()
+        ])
+    except Exception:
+        # fallback agents
+        class PriorityAgent:
+            name = "PriorityAgent"
+            def run(self, tasks):
+                return [f"PRIORITY: {t}" for t in tasks]
+
+        class PlannerAgent:
+            name = "PlannerAgent"
+            def run(self, tasks):
+                return [f"PLAN: {t}" for t in tasks]
+
+        agents.extend([PriorityAgent(), PlannerAgent()])
+
+    return agents
+
+
+def process_user_input(text_input, uploaded_file):
+    # Determine input source
+    raw = ""
+
+    if uploaded_file is not None:
+        try:
+            raw_bytes = uploaded_file.read()
+            try:
+                raw = raw_bytes.decode("utf-8")
+            except Exception:
+                raw = str(raw_bytes)
+        except:
+            raw = str(uploaded_file)
+    else:
+        raw = text_input or ""
+
+    # Collector → Orchestrator workflow
+    collector = Collector()
+    collected = collector.collect(raw)
+    tasks = normalize_tasks(collected)
+
+    orch = Orchestrator(load_agents())
+    return orch.process(tasks)
+
+
+with gr.Blocks() as demo:
+    gr.Markdown(
+        "# Personal Productivity Agent (Upgraded)\n"
+        "Paste text, upload a .txt or .json file, or enter tasks. "
+        "The system will analyze and summarize using agents."
+    )
+
+    with gr.Row():
+        text_input = gr.Textbox(
+            lines=6,
+            label="Paste tasks or JSON",
+            placeholder="Example: Fix bug\nWrite tests\nDeploy"
+        )
+        uploaded_file = gr.File(
+            label="Upload .txt / .json",
+            file_count="single",
+            file_types=[".txt", ".json"]
+        )
+
+    run_btn = gr.Button("Process")
+    output_box = gr.Textbox(lines=20, label="Output")
+
+    run_btn.click(
+        process_user_input,
+        inputs=[text_input, uploaded_file],
+        outputs=[output_box]
+    )
+
+
+def serve():
+    demo.launch()
+
+
+if __name__ == "__main__":
+    serve()

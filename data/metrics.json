@@ -1,0 +1,101 @@
+{
+  "counters": {
+    "priority_agent_executions": 1,
+    "priority_agent_success": 1,
+    "planner_agent_executions": 1,
+    "planner_agent_success": 1,
+    "reminder_agent_executions": 1,
+    "reminder_agent_success": 1,
+    "reflection_agent_executions": 1,
+    "reflection_agent_success": 1,
+    "workflows_completed": 1
+  },
+  "metrics": {
+    "priority_agent_duration_duration_ms": [
+      {
+        "timestamp": "2025-11-18T15:56:39.755017",
+        "value": 3.3500194549560547
+      }
+    ],
+    "priority_agent_tasks_processed": [
+      {
+        "timestamp": "2025-11-18T15:56:39.755647",
+        "value": 6
+      }
+    ],
+    "planner_agent_duration_duration_ms": [
+      {
+        "timestamp": "2025-11-18T15:56:39.759400",
+        "value": 0.9634494781494141
+      }
+    ],
+    "planner_agent_tasks_processed": [
+      {
+        "timestamp": "2025-11-18T15:56:39.759969",
+        "value": 11
+      }
+    ],
+    "reminder_agent_duration_duration_ms": [
+      {
+        "timestamp": "2025-11-18T15:56:39.769600",
+        "value": 5.817174911499023
+      }
+    ],
+    "reminder_agent_tasks_processed": [
+      {
+        "timestamp": "2025-11-18T15:56:39.770345",
+        "value": 6
+      }
+    ],
+    "reflection_agent_duration_duration_ms": [
+      {
+        "timestamp": "2025-11-18T15:56:39.775358",
+        "value": 1.8761157989501953
+      }
+    ],
+    "reflection_agent_tasks_processed": [
+      {
+        "timestamp": "2025-11-18T15:56:39.776050",
+        "value": 23
+      }
+    ],
+    "workflow_duration_duration_ms": [
+      {
+        "timestamp": "2025-11-18T15:56:39.777795",
+        "value": 32.51957893371582
+      }
+    ]
+  },
+  "summary": {
+    "counters": {
+      "priority_agent_executions": 1,
+      "priority_agent_success": 1,
+      "planner_agent_executions": 1,
+      "planner_agent_success": 1,
+      "reminder_agent_executions": 1,
+      "reminder_agent_success": 1,
+      "reflection_agent_executions": 1,
+      "reflection_agent_success": 1,
+      "workflows_completed": 1
+    },
+    "metric_counts": {
+      "priority_agent_duration_duration_ms": 1,
+      "priority_agent_tasks_processed": 1,
+      "planner_agent_duration_duration_ms": 1,
+      "planner_agent_tasks_processed": 1,
+      "reminder_agent_duration_duration_ms": 1,
+      "reminder_agent_tasks_processed": 1,
+      "reflection_agent_duration_duration_ms": 1,
+      "reflection_agent_tasks_processed": 1,
+      "workflow_duration_duration_ms": 1
+    },
+    "generated_at": "2025-11-18T15:56:39.778881",
+    "averages": {
+      "priority_agent_duration_duration_ms_avg": 3.35,
+      "planner_agent_duration_duration_ms_avg": 0.96,
+      "reminder_agent_duration_duration_ms_avg": 5.82,
+      "reflection_agent_duration_duration_ms_avg": 1.88,
+      "workflow_duration_duration_ms_avg": 32.52
+    }
+  }
+}
