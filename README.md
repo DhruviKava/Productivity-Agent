@@ -11,7 +11,8 @@ Below is the complete architecture and workflow layout of the system.
 ![Personal Productivity Agent Architecture]
 
 <img width="1801" height="1618" alt="Agent_flow" src="https://github.com/user-attachments/assets/62c6d3e7-c531-41a1-8bcb-113eafa6fce4" />
-<img width="1801" height="1618" alt="Agent_flow_detail" src="https://github.com/user-attachments/assets/440929e8-748e-4c61-8486-aa43583885be" />
+<img width="1801" height="1618" alt="mermaid-diagram-2025-12-01-111708" src="https://github.com/user-attachments/assets/ff911fc4-170d-4288-a3ef-d5a01bbe5310" />
+
 
 ---
 
