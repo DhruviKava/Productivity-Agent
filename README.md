@@ -9,38 +9,9 @@ This project implements a multi‑agent productivity system designed to collect 
 
 Below is the complete architecture and workflow layout of the system.
 ![Personal Productivity Agent Architecture]
-<img width="1801" height="1618" alt="AgentFlow" src="https://github.com/user-attachments/assets/202265a8-16ef-42c8-960d-1c9eb5b46e96" />
 
-```
-                         ┌─────────────────────────────────────────┐
-                         │     Main Orchestrator (A2A Hub)         │
-                         │    Coordinates all agent operations     │
-                         └──────────────┬──────────────────────────┘
-                                        │
-                               ┌────────┴────────┐
-                               │                 │
-                       ┌───────▼──────┐   ┌─────▼─────────┐
-                       │ Collector    │   │   Priority     │
-                       │   Agent      │   │     Agent      │
-                       └──────────────┘   └───────┬────────┘
-                                                  │
-                                        ┌─────────▼─────────┐
-                                        │     Planner       │
-                                        │      Agent        │
-                                        └─────────┬─────────┘
-                                                  │
-                    ┌─────────────────────────────┴──────────────────────────┐
-                    │                                                        │
-           ┌────────▼────────┐                                      ┌────────▼─────────┐
-           │   Reminder      │                                      │   Reflection      │
-           │     Agent       │                                      │      Agent        │
-           └─────────────────┘                                      └───────────────────┘
-
-┌──────────────────────────────────────────────────────────────┐
-│                   User Interface (Gradio)                    │
-│           Modern dashboard for interacting with agents       │
-└──────────────────────────────────────────────────────────────┘
-```
+<img width="1801" height="1618" alt="Agent_flow" src="https://github.com/user-attachments/assets/62c6d3e7-c531-41a1-8bcb-113eafa6fce4" />
+<img width="1801" height="1618" alt="Agent_flow_detail" src="https://github.com/user-attachments/assets/440929e8-748e-4c61-8486-aa43583885be" />
 
 ---
 
